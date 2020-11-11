@@ -9,7 +9,7 @@ function Admin(props) {
 
 
     var { data = [] } = props.data;
-    var  data2 = [];
+    var data2 = [];
     console.log(data)
     const getdata = data.map(item => (
         data2.push({ 'x': item.id, 'y': item.clicks })
@@ -35,10 +35,10 @@ function Admin(props) {
                 <tbody>{renderData}</tbody>
 
             </Table>
-                <>{getdata}</>
 
             <BarChart
-                axisLabels={{ x: 'url', y: 'clicks' }}
+                getdata
+                axisLabels={{ x: 'id', y: 'clicks' }}
                 axes
                 data={data2}
 
